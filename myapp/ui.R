@@ -1,35 +1,30 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("My App"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30),
-       submitButton("Submit")
+         sliderInput("xint","Speed of 1920's Car (miles/hour):", min=0, max=30, value=15, step=0.1),
+         sliderInput("ptalpha","%Point ocapacity:", min=0, max=100, value=50, step=1),
+         sliderInput("lnwt","Graph line width", min=0, max=5, value=1, step=0.1),
+         checkboxInput("mod1tg","Show/Hide fit 1", value=TRUE),
+         checkboxInput("mod2tg","Show/Hide fit 2", value=TRUE),
+         checkboxInput("mod3tg","Show/Hide fit 3", value=TRUE)
+         # submitButton()
     ),
-    
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+         plotlyOutput("plot"),
+         "Hola",
+         textOutput("tout1"),
+         textOutput("tout2"),
+         textOutput("tout3")
     )
   )
 ))
