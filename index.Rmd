@@ -1,33 +1,31 @@
 ---
-title: "Untitled"
-output: ioslides_presentation
+title: "Untitled Presentation"
+author: "Stephen J. Osborne"
+date: "21st September 2018"
+logo: "sjo.png"
+output:
+     ioslides_presentation:
+         css: style.css
+         widescreen: yes
+         theme: yeti
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE)
 ```
 
-## R Markdown
+## Slide 2 of 5
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
-## Slide with Bullets
+## Slide 3 of 5
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
-## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+## Slide 4 of 5
 
-## Slide with Plot
 
-```{r pressure}
-plot(pressure)
-```
+
+## Slide 5 of 5
+
 
