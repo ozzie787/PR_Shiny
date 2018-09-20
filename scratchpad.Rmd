@@ -2,6 +2,9 @@
 library(data.table)
 library(datasets)
 data("cars")
+
+setwd("~/Documents/Courses/Data_Sci/09_Developing_Data_Products/PR_Shiny/myapp")
+
 fit1 <- lm(dist~speed-1, cars)
 fit2 <- glm(dist~speed + I(speed^2) -1, data=cars)
 cutspeed <- 20
@@ -52,4 +55,12 @@ plot
 ggplotly(plot)
 ```
 
-
+```{r}
+mod1tg = TRUE
+     if(mod1tg){
+          s1 <- "geom_line(data=f1,aes(x=x,y=y), color=\"black\", size=input$lnwt/2)"
+     } else {
+          s1 <- NULL
+     }
+s1
+```

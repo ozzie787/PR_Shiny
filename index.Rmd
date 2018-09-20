@@ -1,5 +1,5 @@
 ---
-title: "Untitled Presentation"
+title: "Predicting the Stopping Distance of a 1920's Car"
 author: "Stephen J. Osborne"
 date: "21st September 2018"
 logo: "sjo.png"
