@@ -1,6 +1,6 @@
 library(shiny)
-library(shiny)
 library(datasets)
+library(data.table)
 library(ggplot2)
 library(plotly)
 data("cars")
@@ -73,8 +73,17 @@ shinyServer(function(input, output) {
           )
      })
      
-     output$tout0 <- renderText({paste("Car stopping distance at ",input$xint,"mph (",round(input$xint/1.6,1), "km/h )")})
-     output$tout1 <- renderText({paste("Black Linear model:",round(yint1(),2),"feet (",round(yint1()/0.3,2), "meters )")})
-     output$tout2 <- renderText({paste("Red Polynomial model:",round(yint2(),2),"feet (",round(yint2()/0.3,2), "meters )")})
-     output$tout3 <- renderText({paste("Blue Spline model:",round(yint4(),2),"feet (",round(yint4()/0.3,2), "meters )")})
+     output$tout0 <- renderText({paste("Car stopping distance at ",input$xint,"mph (",round(input$xint*1.60934,1), "km/h )")})
+
+     output$dt1 <- renderDataTable({
+          dt0 <- data.table(
+               c("Black","Red","Blue"),
+               c("Linear model","Polynomial model","Blue Spline model"),
+               c(round(yint1(),2),round(yint2(),2),round(yint4(),2)),
+               c(round(yint1()*0.3048,2),round(yint2()*0.3048,2),round(yint4()*0.3048,2))
+          )
+          colnames(dt0) <- c("Line Colour", "Model Type", "Predicted Distance in Feet", "Predicted Distance Converted to meters")
+          dt0
+     })
+     
 })
