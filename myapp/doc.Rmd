@@ -61,7 +61,7 @@ The three checkboxes in Figure 1, nuber 6 toggle the drawn lines representing th
 
 ### 4. Application Overview
 
-![**Figure 1:** Annotated capture of the app running with default values in a Google Chrome Version 69.0.3497.100 (64-bit)](../FIGS/app1E.jpg)
+![**Figure 1:** Annotated capture of the app running with default values in a Google Chrome Version 69.0.3497.100 (64-bit)](app1E.jpg)
 
 **Key to Figure 1**
 

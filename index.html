@@ -3203,11 +3203,11 @@ border-radius: 25px;
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">21st September 2018</p>
+            <p style="margin-top: 6px; margin-left: -2px;">23rd September 2018</p>
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>The Data</h2></hgroup><article  id="the-data" class="smaller ">
+<slide class=""><hgroup><h2>The Data</h2></hgroup><article  class="smaller " id="the-data">
 
 <p>The model for the data <code>cars</code> was loaded from the datasets package.</p>
 
@@ -3227,7 +3227,7 @@ head(cars)</pre>
 <li><code>dist</code>, Stopping distance in feet (ft)</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>The Models</h2></hgroup><article  id="the-models" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The Models</h2></hgroup><article  class="smaller " id="the-models">
 
 <p>Three models were fit to the data:</p>
 
@@ -3243,7 +3243,7 @@ cutspeed &lt;- 20
 d1   &lt;- as.data.frame(cbind(cars, speedsp = ifelse(cars$speed &gt; cutspeed, cars$speed - cutspeed, 0 )))
 fit4 &lt;- lm(dist ~ speedsp + speed -1, data=d1)</pre>
 
-</article></slide><slide class=""><hgroup><h2>The Calculation of the Result</h2></hgroup><article  id="the-calculation-of-the-result" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The Calculation of the Result</h2></hgroup><article  class="smaller " id="the-calculation-of-the-result">
 
 <div style="width:50%; float:left">
 <pre class = 'prettyprint lang-r'>### In app xint is the speed inputed by the user
@@ -3281,7 +3281,7 @@ tbl # List of predictions in feet</pre>
 </ul></li>
 </ul></div>
 
-</article></slide><slide class=""><hgroup><h2>The App’s UI</h2></hgroup><article  id="the-apps-ui" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The App’s UI</h2></hgroup><article  class="smaller " id="the-apps-ui">
 
 <div style="width:50%; float:left">
 <div class="figure">
