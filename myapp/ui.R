@@ -6,8 +6,9 @@ library(plotly)
 data("cars")
 
 # Define UI for application that draws a histogram
-shinyUI(fluidPage(
-  
+shinyUI(fluidPage(tabsetPanel(
+
+     tabPanel("App", 
   # Application title
   titlePanel("Stopping distance of a 1920's Car"),
   
@@ -29,8 +30,15 @@ shinyUI(fluidPage(
          h3(textOutput("tout0")),
          dataTableOutput("dt1"),
          p("Note conversions to metric are approximate: 1 mph = 1.60934 km/h; 1 ft = 0.3048 m.")
-         
 
     )
   )
-))
+     ),
+  
+     tabPanel("Getting Started",
+     
+     titlePanel("Getting Started"),
+     includeMarkdown("doc.md")
+     )
+  
+)))
